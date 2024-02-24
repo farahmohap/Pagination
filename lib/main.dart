@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      color: Colors.blue,
       title: 'Flutter Demo',
-      home:  Pagination(),
+      home: Pagination(),
     );
   }
 }
-

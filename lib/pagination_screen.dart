@@ -14,13 +14,21 @@ class Pagination extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(children: [
-        PaginatedDataTable(columns:const [
-          DataColumn(label: Text('UserId')),
-          DataColumn(label: Text('UserName')),
-          DataColumn(label: Text('UserAge'))
-        ], source: Data())
+        Center(
+          child: PaginatedDataTable(
+              columnSpacing: 100,
+              horizontalMargin: 80,
+              //showCheckboxColumn: true,
+              header: const Center(child: Text('User Data')),
+              //rowsPerPage: 10,
+              columns: const [
+                DataColumn(label: Text('UserId')),
+                DataColumn(label: Text('UserName')),
+                DataColumn(label: Text('UserAge'))
+              ],
+              source: Data()),
+        )
       ]),
     );
   }
 }
-
